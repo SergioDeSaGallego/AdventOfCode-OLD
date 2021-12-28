@@ -24,49 +24,49 @@ $data | foreach-Object {
 
         $resultB=[int]$letterB+[int]$letterC+[int]$letterD
 
-        if($resultA -lt $resultB){[int]$conta++}
+        if($resultA -lt $resultB){$conta++}
     }
     if($control -eq 5){
         $letterE=$numCur
 
         $resultC=[int]$letterE+[int]$letterC+[int]$letterD
         
-        if($resultB -lt $resultC){[int]$conta++}
+        if($resultB -lt $resultC){$conta++}
     }
     if($control -eq 6){
         $letterF=$numCur
 
         $resultD=[int]$letterE+[int]$letterF+[int]$letterD
         
-        if($resultC -lt $resultD){[int]$conta++}
+        if($resultC -lt $resultD){$conta++}
     }
     if($control -eq 7){
         $letterG=$numCur
 
         $resultE=[int]$letterE+[int]$letterF+[int]$letterG
 
-        if($resultD -lt $resultE){[int]$conta++}
+        if($resultD -lt $resultE){$conta++}
     }
     if($control -eq 8){
         $letterH=$numCur
 
         $resultF=[int]$letterF+[int]$letterG+[int]$letterH
 
-        if($resultE -lt $resultF){[int]$conta++}
+        if($resultE -lt $resultF){$conta++}
     }
     if($control -eq 9){
         $letterH2=$numCur
 
         $resultG=[int]$letterH2+[int]$letterG+[int]$letterH
 
-        if($resultF -lt $resultG){[int]$conta++}
+        if($resultF -lt $resultG){$conta++}
     }
     if($control -eq 10){
         $letterH3=$numCur
 
         $resultH=[int]$letterH2+[int]$letterH3+[int]$letterH
 
-        if($resultG -lt $resultH){[int]$conta++}
+        if($resultG -lt $resultH){$conta++}
     }
 
 
@@ -74,9 +74,5 @@ $data | foreach-Object {
 
     
     if($control -eq 11){$control = 1}
- 
- 
-}  
 
-
-
+}
