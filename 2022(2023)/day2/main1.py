@@ -33,4 +33,16 @@ test="""A Y
 B X
 C Z"""
 
-print(repr(test))
+#rock     = 1
+#paper    = 2
+#Scissors = 3
+
+#lost     = 0
+#draw     = 3
+#win      = 8
+
+
+
+
+
+
