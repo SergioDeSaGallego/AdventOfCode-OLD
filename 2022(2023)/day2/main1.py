@@ -26,6 +26,12 @@
 #What would your total score be if everything goes exactly according to your strategy guide?
 #
 
+from funcs import whowin
+import os
+import sys
+
+with open(os.path.join(sys.path[0], 'input'), 'r') as inputF:
+	strategy_guide=inputF.read().split("\n")
 
 
 
@@ -33,16 +39,37 @@ test="""A Y
 B X
 C Z"""
 
-#rock     = 1
-#paper    = 2
-#Scissors = 3
+#rock(A/X)     = 1
+#paper(B/Y)    = 2
+#Scissors(C/z) = 3
 
-#lost     = 0
-#draw     = 3
-#win      = 8
+#lost          = 0
+#draw          = 3
+#win           = 6
 
+punts = 0
+for x in (strategy_guide):
+	puntos_temporal					= 0
+	ronda_tempo					= x.split(' ')
+	print(ronda_tempo)
+	if x == '':
+		break #break puesto para la ultima iteracion, input nos da una cadena vacia al final debido al split().
+	ronda						= {"enemy":ronda_tempo[0], "mc":ronda_tempo[1]}
 
+	if (whowin(ronda['enemy'], ronda['mc']))	== "draw":
+		puntos_temporal += 3
+	if (whowin(ronda['enemy'], ronda['mc']))	== "win":
+		puntos_temporal += 6
+	if ronda['mc']					== "X":
+		puntos_temporal += 1
+	if ronda['mc']					== "Y":
+		puntos_temporal += 2
+	if ronda['mc'] 					== "Z":
+		puntos_temporal += 3
 
+	punts += puntos_temporal
+	print(punts)
+print(punts)
 
 
 
