@@ -35,13 +35,25 @@ def whowin(en,mc):
 	}
 	return resultado[(en,mc)]
 
-"""x=lose, y=draw, z=win
-"""
+#x=lose, y=draw, z=win
+
+#A=rock, B=paper, C=scissors
+
+#
+
+
+
 
 def whatchoos(en,res):
 	choos = {
-		('A','X'):'R',
+		('A','X'):'t',
+		('A','Y'):'r',
+		('A','Z'):'p',
+		('B','X'):'r',
+		('B','Y'):'p',
+		('B','Z'):'t',
+		('C','X'):'p',
+		('C','Y'):'t',
+		('C','Z'):'r'
 	}
-
-
-
+	return choos[(en,m)]
