@@ -16,10 +16,37 @@
 #
 #Following the Elf's instructions for the second column, what would your total score be if everything goes exactly according to your strategy guide?
 
-test="""A Y
-B X
-C Z"""
+
+from funcs import whatchoos
+import sys
+import os
 
 
 
+#test="""A Y
+#B X
+#C Z"""
 
+with open(os.path.join(sys.path[0], 'input'), 'r' ) as inputF:
+	guide=inputF.read()
+
+guide = guide.split('\n')
+
+print(guide)
+
+punts=0
+
+points_chos = {('r'):1,('p'):2,('t'):3}
+points_resh = {('X'):0,('Y'):3,('Z'):6}
+
+for x in guide:
+	if x != '':
+		chos=whatchoos(x[0], x[2])
+		punts += points_chos[(chos)]
+		punts += points_resh.get(x[2],0)
+		#no diferencia entre usar "points_chos[(chos)] y usar points_chos.get(chos,0)
+		# la unica diferencia podría ser, la posibilidad de elegir un valor por defecto (el "0" al final en la funcion "get")
+		# esto del 0 puede ser util cuando queramos llamar a un diccionario usando valores en una lista que PODRIA tener valores vacíos, como puede ser nuestra lista de "input"
+		# el caso es (como demuestro aqui al hacer las llamadas a los dos ciccionarios de diferente manera) que ambas hacen la llamada al diccionario con exito, por lo que dependera
+		# de cual se necesite, dada la ocasion
+print(punts)

@@ -56,4 +56,4 @@ def whatchoos(en,res):
 		('C','Y'):'t',
 		('C','Z'):'r'
 	}
-	return choos[(en,m)]
+	return choos[(en,res)]
