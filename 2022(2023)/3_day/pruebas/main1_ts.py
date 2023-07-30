@@ -35,26 +35,33 @@
 #
 #Find the item type that appears in both compartments of each rucksack. What is the sum of the priorities of those item types?
 
-testing_sample='''vJrwpWtwJgWrhcsFMMfFFhFp
-jqHRNqRjqzjGDLGLrsFMfFZSrLrFZsSL
-PmmdzqPrVvPwwTWBwg
-wMqvLMZHhHMvwLHjbvcjnnSBnvTQFn
-ttgJtRGJQctTZtZT
-CrZsJsPPZsGzwwsLwLmpwMDw'''
+#testing_sample='''vJrwpWtwJgWrhcsFMMfFFhFp
+#jqHRNqRjqzjGDLGLrsFMfFZSrLrFZsSL
+#PmmdzqPrVvPwwTWBwg
+#wMqvLMZHhHMvwLHjbvcjnnSBnvTQFn
+#ttgJtRGJQctTZtZT
+#CrZsJsPPZsGzwwsLwLmpwMDw'''
 
-from funcs import valores
+from funcs_ts import valores, comparat
+import os, sys
 
 
-listas					= testing_sample.split('\n')
+with open(os.path.join(sys.path[0], 'input'), 'r') as inputF:
+	listas						= inputF.read().split('\n')
+
+punts							= 0
 for x in listas:
-	mit				= len(x)//2
-	string_1			= ''
-	string_2			= ''
+	if x == '':
+		break
+	mit						= len(x)//2-1
+	#print(mit)
+	string_1					= ''
+	string_2					= ''
 
 	for index, y in enumerate(x):
 		if index <= mit:
-			string_1	+= y
+			string_1			+= y
 		else:
-			string_2	+= y
-	print('string_1 =',string_1,' string_2 =',string_2)
-
+			string_2			+= y
+	punts						+= valores[(comparat(string_1, string_2))]
+print(punts)
