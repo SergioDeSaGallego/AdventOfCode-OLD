@@ -46,7 +46,7 @@ from funcs_ts import valores, comparat
 import os, sys
 
 
-with open(os.path.join(sys.path[0], 'input'), 'r') as inputF:
+with open(os.path.join(sys.path[0], '/../input'), 'r') as inputF:
 	listas						= inputF.read().split('\n')
 
 punts							= 0
