@@ -5,13 +5,11 @@
 
 ## TOC
 
-- [Challenge part 1](#Challenge-1)
-- [Challenge part 2](#Challenge-2)
+- [Challenge part 1](#day-3-rucksack-reorganization)
+- [Challenge part 2](#part-two)
 
 
-## Challenge 1
-
---- Day 3: Rucksack Reorganization ---
+## Day 3: Rucksack Reorganization
 
 One Elf has the important job of loading all of the rucksacks with supplies for the jungle journey. Unfortunately, that Elf didn't quite follow the packing instructions, and so a few items now need to be rearranged.
 
@@ -23,12 +21,12 @@ The list of items for each rucksack is given as characters all on a single line.
 
 For example, suppose you have the following list of contents from six rucksacks:
 
-	vJrwpWtwJgWrhcsFMMfFFhFp
-	jqHRNqRjqzjGDLGLrsFMfFZSrLrFZsSL
-	PmmdzqPrVvPwwTWBwg
-	wMqvLMZHhHMvwLHjbvcjnnSBnvTQFn
-	ttgJtRGJQctTZtZT
-	CrZsJsPPZsGzwwsLwLmpwMDw
+    vJrwpWtwJgWrhcsFMMfFFhFp
+    jqHRNqRjqzjGDLGLrsFMfFZSrLrFZsSL
+    PmmdzqPrVvPwwTWBwg
+    wMqvLMZHhHMvwLHjbvcjnnSBnvTQFn
+    ttgJtRGJQctTZtZT
+    CrZsJsPPZsGzwwsLwLmpwMDw
 
 The first rucksack contains the items vJrwpWtwJgWrhcsFMMfFFhFp, which means its first compartment contains the items vJrwpWtwJgWr, while the second compartment contains the items hcsFMMfFFhFp. The only item type that appears in both compartments is lowercase p.
 The second rucksack's compartments contain jqHRNqRjqzjGDLGL and rsFMfFZSrLrFZsSL. The only item type that appears in both compartments is uppercase L.
@@ -53,9 +51,7 @@ The first half of this puzzle is complete! It provides one gold star: *
 
 
 
-## Challenge 2
-
---- Part Two ---
+## Part Two
 
 As you finish identifying the misplaced items, the Elves come to you with another issue.
 
