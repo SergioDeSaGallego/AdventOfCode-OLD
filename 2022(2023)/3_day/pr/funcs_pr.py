@@ -1,27 +1,4 @@
 
-
-
-
-
-#valores							= {}
-#letras								= 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ'
-#counter							= 0
-#for x in letras:
-#	counter 						+= 1
-#	valores.update({x:counter})
-
-
-
-
-#def comparat(str_1, str_2):
-#	eq=''
-#	for x in str_1:
-#		if x in str_2:
-#			eq += x
-#	return eq[-1]
-
-
-
 alfabeto							= 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ'
 priori								= {char: index+1 for index, char in enumerate(alfabeto)}
 									#se cambió la forma anterior en la que se usaba una variable counter
