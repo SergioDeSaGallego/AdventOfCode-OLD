@@ -1,4 +1,4 @@
-import os, sys
+import os
 from funcs_pr import common_val_from_three_strings
 
 
