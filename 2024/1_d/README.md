@@ -7,9 +7,9 @@ Project to complete all exercises in Advent of Code, but not really trying to ma
 Day 1
 ## Index
 
-[Part 1](#Part_1)
+[Part 1](#Part-1)
 
-[Part 2](#Part_2)
+[Part 2](#Part-2)
 
 
 ## Part 1
