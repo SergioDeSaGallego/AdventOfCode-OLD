@@ -7,13 +7,12 @@ Project to complete all exercises in Advent of Code, but not really trying to ma
 Day 1
 ## Index
 
-[Part 1](#Day-1:-Historian-Hysteria)
+[Part 1](##day-1-historian-hysteria)
 
 [Part 2](#Part-2)
 
 
-## Day 1: Historian Hysteria
-
+## Day 1 Historian Hysteria
 
 
 
