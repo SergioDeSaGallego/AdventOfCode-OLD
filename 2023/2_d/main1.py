@@ -1,9 +1,12 @@
 
-from funcs import LineIngest
+from funcs import line_ingest, GameIterations
 
 
 
-"""You're launched high into the atmosphere! The apex of your trajectory just barely reaches the surface of a large island floating in the sky. You gently land in a fluffy pile of leaves. It's quite cold, but you don't see much snow. An Elf runs over to greet you.
+"""
+--- Day 2: Cube Conundrum ---
+
+You're launched high into the atmosphere! The apex of your trajectory just barely reaches the surface of a large island floating in the sky. You gently land in a fluffy pile of leaves. It's quite cold, but you don't see much snow. An Elf runs over to greet you.
 
 The Elf explains that you've arrived at Snow Island and apologizes for the lack of snow. He'll be happy to explain the situation, but it's a bit of a walk, so you have some time. They don't get many visitors up here; would you like to play a game in the meantime?
 
@@ -43,33 +46,33 @@ with open('input' ,'r') as inputF:
     games=inputF.read().splitlines()
 
 
-allgames={}
+all_games={}
 
 
 # Adding games in classes to parse them
 for Line in games:
     L_Stage=(Line.split(':')[0])
     L_Stage=L_Stage.split(' ')[1]
-    allgames[int(L_Stage)] = LineIngest(L_Stage,Line.split(':')[1])
+    all_games[int(L_Stage)] = line_ingest(L_Stage,Line.split(':')[1])
 
 
 count=0
 
 # Checking which games aren't possible
-for i in allgames:
+for i in all_games:
     # print("Estamos en la Stage:", i)
     
     pos=""
     if pos != "!":
-        for t in allgames[i].red:
+        for t in all_games[i].red:
             if int(t) > 12:
                 pos="!"
     if pos != "!":
-        for t in allgames[i].green:
+        for t in all_games[i].green:
             if int(t) > 13:
                 pos="!"
     if pos != "!":
-        for t in allgames[i].blue:
+        for t in all_games[i].blue:
             if int(t) > 14:
                 pos="!"
     

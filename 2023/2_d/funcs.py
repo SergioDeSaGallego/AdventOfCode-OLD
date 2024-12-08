@@ -12,7 +12,7 @@ class GameIterations:
 
 # Parsing lines of each game to by color, round and game
 
-def LineIngest(L_Stage,line):
+def line_ingest(L_Stage,line):
     Fix_Line=line.split(';')
     L_Red=[]
     L_Blue=[]
